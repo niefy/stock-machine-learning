@@ -11,6 +11,5 @@ okexRESTURL = 'www.okex.com'
 okexSpot = OkexSpot(okexRESTURL, apikey, secretkey)
 
 print('K线数据')
-print(okexSpot.kline('btc_usdt'))
-print(' 现货行情 ')
-print(okexSpot.ticker('btc_usdt'))
+kline_data = okexSpot.kline('btc_usdt')
+print(kline_data)
