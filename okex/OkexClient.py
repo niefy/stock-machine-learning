@@ -16,10 +16,10 @@ okexSpot = OkexSpot(okexRESTURL, apikey, secretkey)
 
 print('K线数据')
 # 方式1：从API接口获取最新K线数据
-kline_data_json = okexSpot.kline('btc_usdt')
+# kline_data_json = okexSpot.kline('btc_usdt')
 
 # 方式2 使用本地保存的数据(不是最新)，避免接口连接缓慢或超时
-# kline_data_json = json.loads(open('kline_data.txt', 'r').read())
+kline_data_json = json.loads(open('kline_data.txt', 'r').read())
 
 
 kline_data = pd.DataFrame(kline_data_json,
@@ -41,5 +41,15 @@ ma30_data = talib.MA(close_prices,timeperiod=30)
 macd, macdsignal, macdhist = talib.MACD(close_prices)
 rsi_data = talib.RSI(close_prices,timeperiod=10)
 boll_upper, boll_middle, boll_lower= talib.BBANDS(close_prices)
-
 print('macd',macd)
+
+# 保存训练数据中的一组训练数据
+features = []
+features.append(ma7_data)
+features.append(macd)
+features.append(macdsignal)
+features.append(macdhist)
+features.append(rsi_data)
+features.append(boll_upper)
+features.append(boll_middle)
+features.append(boll_lower)
