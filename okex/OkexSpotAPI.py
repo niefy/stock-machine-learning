@@ -34,10 +34,12 @@ class OkexSpot:
         return httpGet(self.__url, TRADES_RESOURCE, params)
 
     # 获取K线数据
-    def kline(self, symbol='btc_usdt', type = '1hour'):
+    def kline(self, symbol='btc_usdt', type = '1hour',since=None):
         TRADES_RESOURCE = "/api/v1/kline.do"
         params = 'symbol=%(symbol)s' % {'symbol': symbol}
         params += '&type=%(type)s' % {'type': type}
+        if since:
+            params += '&since=%(since)s' % {'since': since}
         return httpGet(self.__url, TRADES_RESOURCE, params)
 
     # 获取用户账户信息
