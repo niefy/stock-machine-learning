@@ -3,3 +3,4 @@ numpy
 pandas
 tensorflow
 json
+scikit_learn>=0.19.1
