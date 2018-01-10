@@ -1,0 +1,5 @@
+talib
+numpy
+pandas
+tensorflow
+json
