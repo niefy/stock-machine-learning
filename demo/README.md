@@ -1,4 +1,4 @@
-## 练习过程中参考的一些demo
+## 练习过程中参考的一些demo、笔记
 - [tensorflow](https://morvanzhou.github.io/tutorials/machine-learning/tensorflow/)
 - [sklearn](https://morvanzhou.github.io/tutorials/machine-learning/sklearn/)
 
