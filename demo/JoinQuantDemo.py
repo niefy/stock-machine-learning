@@ -1,4 +1,5 @@
 # https://zhuanlan.zhihu.com/p/21849601
+# 需从聚宽获取数据，无法本地运行，只用作参考
 import talib
 import pandas as pd
 from jqdata import *
