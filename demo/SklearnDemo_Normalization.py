@@ -1,7 +1,6 @@
 # 正规化（标准化）数据，可提升机器学习的成效
 # DEMO from: https://morvanzhou.github.io/tutorials/machine-learning/sklearn/3-1-normalization/
 from sklearn import preprocessing
-import numpy as np
 # 将资料分割为train和test的模块
 from sklearn.model_selection import train_test_split
 # 生成适合做分类资料的模块
