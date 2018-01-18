@@ -5,4 +5,4 @@
 	
 # 研究方法
 - SVM
-- LSTM（）
+- KNeighborsClassifier
