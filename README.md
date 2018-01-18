@@ -4,5 +4,5 @@
 	- 使用tensorflow进行训练，模拟特征值
 	
 # 研究方法
-- SVM
-- KNeighborsClassifier
+- SVM（准确率0.5）
+- KNeighborsClassifier（准确率0.56）
