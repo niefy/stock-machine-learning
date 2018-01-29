@@ -3,6 +3,7 @@ from AicoinClient import AicoinClient
 import numpy as np
 from sklearn import svm
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.linear_model import LinearRegression
 
 TEST_DATA_NUM = 50  # 测试数据数量
 
@@ -39,3 +40,9 @@ neighbors = KNeighborsClassifier()
 neighbors.fit(x_train, y_train)
 prediction = neighbors.predict(x_test)
 print("KNeighborsClassifier准确率", get_prediction_rate(y_test, prediction))
+
+# LinearRegression
+linearRegression = LinearRegression()
+linearRegression.fit(x_train, y_train)
+prediction = linearRegression.predict(x_test)>0.5
+print("LinearRegression准确率",get_prediction_rate(y_test, prediction))
